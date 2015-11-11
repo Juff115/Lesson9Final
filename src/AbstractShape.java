@@ -20,17 +20,17 @@ public abstract class AbstractShape{
     public abstract double area(); 
 
     public abstract void draw(Pen p);
-
-      public double getxPos() {
+    //final methods cant be changed by children
+    public final double getxPos() {
         return xPos;
     }
 
-       public double getyPos() {
+    public final double getyPos() {
         
         return yPos;
     }
 
-      public void move(double x, double y) {
+    public final void move(double x, double y) {
         xPos=x;
         yPos=y;
     }
