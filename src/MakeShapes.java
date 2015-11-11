@@ -14,6 +14,12 @@ public class MakeShapes {
         z.draw(p);
         AbstractShape w = makeShape("wheel",x);
         w.draw(p);
+        if (w instanceof Circle){
+            System.out.println("w is a circle");
+        }
+        else if (w instanceof Rectangle){
+            System.out.println("w is a rectangle");
+        }
     }
     
     public static AbstractShape makeShape(String type, AbstractShape s){
