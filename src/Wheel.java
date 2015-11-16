@@ -32,6 +32,7 @@ public class Wheel extends Circle {
         str+="X-Y: ("+xPos+", "+yPos+")" +"\n";
         str+="Area: "+ area() +"\n";
         str+="Spokes: "+spokes+"\n";
+        str+="Permeter: "+ perimeter() +"\n";
         return str;
     }
     //only available to wheel not circle

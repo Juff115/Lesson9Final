@@ -18,6 +18,8 @@ public abstract class AbstractShape{
     //cant be defiened here
     //but must be aknowledged
     public abstract double area(); 
+    
+    public abstract double perimeter();
 
     public abstract void draw(Pen p);
     //final methods cant be changed by children
@@ -30,7 +32,7 @@ public abstract class AbstractShape{
         return yPos;
     }
 
-    public final void move(double x, double y) {
+    public void move(double x, double y) {
         xPos=x;
         yPos=y;
     }

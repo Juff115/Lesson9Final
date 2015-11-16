@@ -21,6 +21,10 @@ public class Rectangle extends AbstractShape{
     public double area() {
         return width*height;
     }
+    
+    public double perimeter(){
+        return (width*2)+(height*2);
+    }
 
     public void draw(Pen p) {
         p.up();
@@ -47,6 +51,7 @@ public class Rectangle extends AbstractShape{
         str+="Width x Height = "+width+" x "+ height+"\n";
         str+=super.toString();
         str+="Area: "+ area() +"\n";
+        str+="Permeter: "+ perimeter() +"\n";
         return str;
     }
 }
