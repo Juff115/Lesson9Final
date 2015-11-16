@@ -10,7 +10,7 @@ public class ShapeMaker extends javax.swing.JFrame {
     public ShapeMaker() {
         initComponents();
         SketchPadWindow w =new SketchPadWindow(400,400);
-        w.setLocation(50, 275);
+        w.setLocation(0, 295);
         p= new StandardPen(w);
         s=new Circle(0,0,0);
     }
