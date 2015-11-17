@@ -24,7 +24,7 @@ public class Triangle extends AbstractShape{
     }
 
     public double perimeter() {
-        return Math.sqrt((xPos-x2)*(xPos-x2)+(yPos-y2)*(yPos-y2));
+        return Math.sqrt((xPos-x2)*(xPos-x2)+(yPos-y2)*(yPos-y2))+Math.sqrt((x3-x2)*(x3-x2)+(y3-y2)*(y3-y2))+Math.sqrt((xPos-x3)*(xPos-x3)+(yPos-y3)*(yPos-y3));
     }
 
     
