@@ -3,6 +3,7 @@ import java.text.NumberFormat;
 public class EmployeePayList extends javax.swing.JFrame {
 
     Employee emp[];
+    int num=0;
     int size=0;
     NumberFormat nf;
     public EmployeePayList() {
@@ -235,6 +236,10 @@ public class EmployeePayList extends javax.swing.JFrame {
         String nm, type;
         int hours;
         double rate;
+        if (num==10){
+            btnadd.setEnabled(false);
+            JOptionPane.showMessageDialog(this, "10 employees are already entered");
+        }
         try{
             nm=txtname.getText();
             hours = Integer.parseInt(txthours.getText());
@@ -257,6 +262,7 @@ public class EmployeePayList extends javax.swing.JFrame {
             tblpay.setValueAt(nf.format(temp.getPay()),size,1);
             size++;
             lbltotalpay.setText(nf.format(Employee.getTotalPay()));
+            num++;
             clearform();
             return;//leave now
             
@@ -267,6 +273,7 @@ public class EmployeePayList extends javax.swing.JFrame {
         if (temp.setHours(hours)==false) error+= "Hours: " + Employee.getHourRules() +"\n";
         if (temp.setRate(rate)==false) error+= "Rate: " + Employee.getRateRules() +"\n";
         JOptionPane.showMessageDialog(this, error);
+        
     }//GEN-LAST:event_btnaddActionPerformed
 
     private void btnquitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnquitActionPerformed
